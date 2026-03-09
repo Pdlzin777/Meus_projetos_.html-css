@@ -1,0 +1,101 @@
+<!DOCTYPE html >
+
+<!-- Exportação da Liguagem Base do Site  -->
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI4u6tfIjh5_CYkZB9KKqpiuWk-gWXHuNOEA&s" type="image/x-icon">
+</head>
+
+<!-- Exportação do Documento Css -->
+
+<link rel="stylesheet" href="Meu estilocss.css"> 
+
+<!-- Corpo do Site -->
+
+<body>
+
+    <!-- Titulo do body-->
+
+    <h1> Formulario </h1>
+
+    <!-- Divisão do Formulario -->
+
+    <div class="form-group">
+        <form action="#">
+
+            <!-- Campo de Escrita do Nome -->
+
+            <div class="form-group">
+                <label for="nome"> Nome</label>
+                <br>
+                <input type="text" id="nome">
+                <br>
+            
+
+            <!-- Campo de Escrita do Sobrenome -->
+            
+                <label for="Sobrenome"> Sobrenome </label>
+                <br>
+                <input type="text" id="Sobrenome">
+                <br>
+            <!-- Campo de Escrita do CPF -->
+            
+                <label for="cpf">CPF</label>
+                <br>
+                <input type="text" id=cpf maxlength="14" placeholder="XXX.XXX.XXX-XX" oninput="mascaraCPF(this)">    
+           
+            <!-- Script para Mascara o CPF -->
+           
+                <script>
+                    function mascaraCPF(cpfField) {
+                        let cpf = cpfField.value;
+    
+                        // Remove tudo que não é número
+                        cpf = cpf.replace(/\D/g, "");
+    
+                        // Adiciona os pontos e traço conforme o formato XXX.XXX.XXX-XX
+                        cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+                        cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+                        cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+    
+                        cpfField.value = cpf;
+                    }
+                </script>
+                <br>
+
+            <!-- Campo tipo escolha, para um beneficio -->
+                <br>
+                <label>Você recebe benefício?</label>
+                <br>
+                <input type="radio" id="sim" name="beneficio" value="sim">
+                <label for="sim">Sim</label>
+                <input type="radio" id="nao" name="beneficio" value="nao">
+                <label for="nao">Não</label>
+                <br>
+            </div>
+            <!-- Botão tipo "scroll"-->
+           <div class="form-group">   
+               <label for="tipo_internet"></label>
+               <select id="tipo_internet" name="tipo_internet">
+                   <option value="fibra">Fibra</option>
+                   <option value="cabo">Cabo</option>
+                   <option value="satélite">Satélite</option>
+                   <option value="rádio">Rádio</option>
+               </select>
+               <br>
+           </div>
+
+        <!-- Butão de Submissão-->
+            <div class="form-group">
+                <button type="submit">Enviar</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
