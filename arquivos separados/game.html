@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Clicar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #score {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #clickButton {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo de Clicar</h1>
+    <p>Clique no botão abaixo para aumentar sua pontuação:</p>
+    <p id="score">Pontuação: 0</p>
+    <button id="clickButton">Clique Aqui!</button>
+
+    <script>
+        // Inicializa a pontuação
+        let score = 0;
+
+        // Função para atualizar a pontuação na tela
+        function updateScore() {
+            document.getElementById("score").textContent = "Pontuação: " + score;
+        }
+
+        // Adiciona um evento de clique ao botão
+        document.getElementById("clickButton").addEventListener("click", function() {
+            // Incrementa a pontuação ao clicar
+            score++;
+            // Atualiza a pontuação exibida na tela
+            updateScore();
+        });
+    </script>
+</body>
+</html>
