@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="shortcut icon" href="https://media.istockphoto.com/id/1244097573/pt/vetorial/headphones-minimal-icon-with-sound-waves.jpg?s=612x612&w=0&k=20&c=c8wThZSzXXZQHukyPrO988LmZXXWMk7lP5EqRirZSHQ=" type="image/x-icon">
+</head>
+<link rel="stylesheet" href="../estilodopodmusica.css">
+<body>
+    <h1>Cadastro de Usuário</h1>
+    <form id="userForm" method="POST" action="..//Banco de Dados/BancodeDados.php">
+        <label for="username">Gmail:</label>
+        <br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Senha:</label>
+        <br>
+        <input type="password" id="password" name="password" required>
+        <p style="font-style: italic;"><a href="../Login/index.html">Login</a></p>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
